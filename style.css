@@ -287,4 +287,20 @@ ul {
     width: 25px;
     height: 25px;
     margin: 4% 0 0 0;
+}#content{
+    width: 500px;
+    height: 17%;
+    background-color: red;
+    margin: 2% 0 0 13%;
+
+}#content i{
+    font-size: x-large;
+    margin-left: 80%;
+    margin-top: 10px;
+}#content #up {
+    box-shadow: none;
+    flex-direction: row;
+    
+}.down{
+    margin-top: 1%;
 }
