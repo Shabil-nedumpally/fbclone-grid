@@ -7,8 +7,8 @@ body {
     height: 100%;
     background-color: black;
     display: grid;
-    grid-template-columns: 25% repeat(3, 1fr);
-    grid-template-rows:10% 50% 50%;
+    grid-template-columns: 25% repeat(4, 25%);
+    grid-template-rows:  60px 100%;
 
 
 
@@ -22,54 +22,58 @@ body {
     background-color: whitesmoke;
 }
 
-.container div:nth-child(1) {
+.container .grid div:nth-child(1) {
     background-color: white;
     grid-column: 1 /span 4;
     height: 100%;
-    position: relative;
     box-shadow: gray 0 0 5px 1px;
     display: flex;
     flex-direction: row;
+    position: fixed;
+    height: 60px;
+    width: 100%;
+    z-index: 1;
 }
 
-.container div:nth-child(2) {
+.grid1 div {
     background-color: whitesmoke;
-    grid-row: 2 / span 3;
-    
+    position: fixed;
+    left: 0px;
+    width: 337px;
     height: 100% ;
 
 
 }
 
 
-.container div:nth-child(5) {
+/* .container div:nth-child(5) {
     background-color: whitesmoke;
     width: 100%;
     height: 100%;
     grid-row: 3;
     grid-column: span 2;
+    overflow-y: scroll;
 
     
-}
+} */
 
 .container div:nth-child(3) {
     grid-column: 2/ span 2;
-    display: flex;
-    flex-direction: row;
-    column-gap: 10px;
-}.container div:nth-child(4){
+    height:100%;
+  }.grid4 div{ 
     grid-row: span 4;
     grid-column:  4;
-    box-shadow: none;
+    box-shadow: none; 
+    position: fixed;
+    width: 100%;
 
     
 
 }
 
-.item:nth-child(1) img {
+.grid.item:nth-child(1) img {
     width: 40px;
     height: 40px;
-    padding: 5px;
 }
 
 #search {
@@ -97,7 +101,7 @@ body {
 
 }
 
-.container div:nth-child(1) i {
+.container .grid div:nth-child(1) i {
     font-size: xx-large;
     margin: 1% 0 0 5%;
     width: 80px;
@@ -107,7 +111,7 @@ body {
     cursor: pointer;
 }
 
-.container div:nth-child(1) i:hover {
+ .grid div:nth-child(1) i:hover {
     background-color: whitesmoke;
 
 }
@@ -231,16 +235,16 @@ ul {
 
 .container #item3 .story {
     box-shadow: none;
-    position: relative;
     top: 4%;
     width: 110px;
     height: 190px;
     border-radius: 5px;
     background-color: red;
-    position: relative;
     cursor: pointer;
     transition: transform 450ms;
     margin-left: 2%;
+    overflow: hidden;
+    margin-top: 2%;
     
 }.container #item3 .story:hover{
     transform: scale(1.09);
@@ -248,11 +252,12 @@ ul {
 }
 #create {
     width: 70%;
-    height: 40%;
+    height: 120px;
     background-color: white;
     box-shadow: none;
     margin-left: 15%;
     border-radius: 5px;
+    margin-top: 10%;    
     display: flex;
     flex-direction: column;
     
@@ -266,7 +271,6 @@ ul {
     width: 100%;
     height: 30px;
     border-radius: 20px;
-    position: relative;
     border: none;
     background-color: whitesmoke;
     margin: 3%;
@@ -278,7 +282,9 @@ ul {
     margin-left: 5%;
     display: flex;
     flex-direction: row;
+    background-color: white;
 }#text{
+    display: flex;
     box-shadow: none;
     width: 90%;
     margin-left: 5%;
@@ -287,20 +293,45 @@ ul {
     width: 25px;
     height: 25px;
     margin: 4% 0 0 0;
-}#content{
+}#content {
     width: 500px;
-    height: 17%;
-    background-color: red;
-    margin: 2% 0 0 13%;
+    height: 450px;
+    background-color: white;
+    margin: 10% 0 0 13%;
+    overflow: hidden;
 
-}#content i{
+}#content #up i{
     font-size: x-large;
     margin-left: 80%;
-    margin-top: 10px;
-}#content #up {
+    margin-top: 20px;
+    
+}#content  #up {
+    display: flex;
     box-shadow: none;
     flex-direction: row;
     
-}.down{
+}.down {
     margin-top: 1%;
+    display: flex;
+    flex-direction: column;
+}.down img{
+    width: 100%;
+    height: 100%;
+    
+}#storypage{
+    width: 100%;
+    height: 205px;
+    background-color: whitesmoke;
+    box-shadow: none;
+    display: flex;
+    flex-direction: row;
+   
+}.buttons i{
+    font-size: x-large;
+    margin: 3% 0 0 20%;
+    cursor: pointer;
+
+}.buttons i:hover{
+    color: blue;
+    
 }
